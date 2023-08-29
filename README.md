@@ -3,7 +3,7 @@ Upon reviewing, I found it most efficient to write my own new file ("ashir.html"
 
 ## I updated:
 
-main.css: I've appended my styles at the end so It doesn't mix up with ones pre-defined in the file.
+main.css: I've appended my styles at the end so It doesn't mix up with ones pre-defined in the file.<br\>
 ashir.html (new): This is my version of index.html. I'm still in progress with the commenting...
 
 ## misc:
