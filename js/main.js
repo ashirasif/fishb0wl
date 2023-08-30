@@ -412,10 +412,21 @@
 
   // Ashir's work starts from here
 
-  // Read more button on click function to expose the entire service text.
+
 
   var initialHeightServicetext;
 
+
+
+
+  var trophiesMapper = {
+    "01" : "Effies 2021 – Shoop: Silver Trophy – Snacks & Desserts<br>Effies 2022 – Jazz: Silver Trophy – Corporate Reputation<br>Effies 2022 – Jazz: Silver Trophy – Positive Change: Social Good – Services<br>Effies 2022 – Jazz: Silver Trophy – Seasonal Marketing – Services<br>Effies 2022 – Shoop: Silver Trophy – Youth Marketing<br>Effies 2022 – 3rd most awarded agency",
+    "02": "Effies 2022 – Shoop: Gold Trophy – Snacks & Desserts<br>Effies 2022 – 3rd most awarded agency",
+    "03": "Effies 2020 – Shoop: Bronze Trophy – Snacks & Desserts<br>Effies 2021 – Jazz: Bronze Trophy – Influencer (Danish Ali)<br>Effies 2021 – Shoop: Bronze Trophy – David & Goliath<br>Effies 2022 – Jazz: Bronze Trophy – Marketing Disruptor<br>Effies 2022 – Jazz: Bronze Trophy – Topical Marketing<br>Effies 2022 – 3rd most awarded agency",
+    "04": "Digital Nation Video Creativity Award for Super for Change campaign by the GSMA Mobile 360 Asia Pacific",
+    "05": "Jazz Women's Day 2021 - Shortlisted for Lisbon International Advertising Festival",
+    "06": "PAS 2017 – Nurpur: Best in Food & Dairy Category"
+  };
 
   var mapper = {
     "GulrezMojez": {
@@ -465,14 +476,14 @@
     },
   };
 
-
   var vids = {
     "grow-green": "https://www.youtube.com/embed/n4t-Boy7hmQ", 
     "guitarist": "https://www.youtube.com/embed/XM0-qDiodN4",
     "the-beetle": "https://www.youtube.com/embed/pYcBioECDOU",
     "palmeira" : "https://www.youtube.com/embed/wuDEL2TQH5M",
     "woodcraft": "https://www.youtube.com/embed/hf2T8fGH5KU",
-    "lady-shutterbug": "https://www.youtube.com/embed/OI1izeM2GYQ"  
+    "lady-shutterbug": "https://www.youtube.com/embed/OI1izeM2GYQ",
+    "SoyaSupreme" : "https://www.youtube.com/embed/nrKR64NRDy4" 
   }
 
   var hideServiceText = function () {
@@ -488,7 +499,7 @@
 
       $(this).text(function (_, old) {
         if (old == "Read More") {
-          return "Minimize";
+          return "Read Less";
         } else {
           return "Read More";
         }
@@ -500,31 +511,57 @@
     $(".anime-element").hover(
       function () {
         // over
+        let name = $(this).attr("src").split("/").slice(-1)[0].split(".")[0];
         $("#hor-animation").css("animation-play-state", "paused");
-        $("#some").toggleClass("hidden");
+        console.log(name, trophiesMapper[name])
+        $("#tropphie-details").append(trophiesMapper[name])
+        $("#some").removeClass("opacity-0")
+
       },
       function () {
         // out
 
-        $("#some").toggleClass("hidden");
+        $("#some").toggleClass("opacity-0");
+        $("#tropphie-details").empty()
         $("#hor-animation").css("animation-play-state", "running");
       }
     );
   };
+  
+
+  var animeStopMobile = function() {
+    $(".mob-anime-element").on("click", function() {
+      $("#some").removeClass("opacity-0");
+      $("#tropphie-details").empty()
+      let name = $(this).attr("src").split("/").slice(-1)[0].split(".")[0];
+      $("#tropphie-details").append(trophiesMapper[name])
+    })
+  }
+
 
   var clCard = function () {
     $(".card").on("click", function () {
       $("#modal").toggleClass("hidden");
       var l = $(this).attr("src").split("/").length
       var src = $(this).attr("src").split("/")[l - 1].split(".")[0];
-      var w = $(window).width() * 0.8;
-      if ($(window).width() >= 1024) {
-        var ifr = `<iframe width="${w}" height="${w / 1.77}" src="${vids[src]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+      var w = $(window).width() * 0.6;
+      console.log(w)
+      if (src == "lady-shutterbug") {
+        if ($(window).width() >= 1024) {
+          $(".pic").append(`<img src="images/portfolio/lady-shutterbug@2x.jpg" style="width:50%" class="object-center">`);
+        }
+        else {
+          $(".pic").append(`<img src="images/portfolio/lady-shutterbug@2x.jpg"`);
+        }
       } else {
-        var ifr = `<iframe width="${w}" height="${w * 1.77}" src="${vids[src]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        if ($(window).width() >= 1024) {
+          var ifr = `<iframe width="${w}" height="${w / 1.77}" src="${vids[src]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        } else {
+          var ifr = `<iframe width="${w}" height="${w * 1.77}" src="${vids[src]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        }
+        
+        $(".pic").append(ifr);
       }
-      
-      $(".pic").append(ifr);
       
       var text = $(this).next("div").children(".font-bold").text();
       $(".pic-text").append(`<p class="text-white font-bold">${text}</p>`);
@@ -563,9 +600,9 @@
       var Name = name.split(/(?=[A-Z])/).join(" ");
       var data = mapper[name];
       var src = $(this).children().first().attr("src");
-      $("#avatar-model").children("#avatar-name").text(Name);
-      $("#avatar-model").children("#occupation").text(data.occupation);
-      $("#avatar-model").children("#details").text(data.details);
+      $("#avatar-name").text(Name);
+      $("#occupation").text(data.occupation);
+      $("#details").text(data.details);
       $("#avatar-model").toggleClass("hidden")
     });
   };
@@ -580,7 +617,20 @@
         $("#avatar-model").toggleClass("hidden");
       });
     };
+
+
+  var clExpandWorks = function () {
+    $("#expand-works").on("click", function() {
+      $("#works-div").toggleClass("h-screen")
+      $(this).text(function (_, i) {
+        return i == "View More" ? "View Less" : "View More"
+      })
+      $("#works-overlay").toggleClass("hidden")
+    });
+  };  
     
+
+
 
   /* Initialize
    * ------------------------------------------------------ */
@@ -599,18 +649,20 @@
     clAOS();
     clAjaxChimp();
     clBackToTop();
+    
 
     // ashir's function
 
     hideServiceText();
     clReadMoreBtn();
     animeStop();
+    animeStopMobile();
     clCard();
     clModalBtn();
     AvatarHover();
     clAvatar();
-    Avatarbtn();
-
+    Avatarbtn();  
+    clExpandWorks();
 
 
   })();

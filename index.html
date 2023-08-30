@@ -20,8 +20,8 @@
 
 </head>
 
-<body style="font-family: 'montserrat-medium', sans-serif;">
-    <main class="bg-cover bg-center" style="background-image: url('images/hero-bg.jpg');">
+<body style="font-family: 'montserrat-medium', sans-serif;" id="top" class="overflow-x-hidden">
+    <main>
         <header class="s-header">
 
             <div class="header-logo">
@@ -47,9 +47,9 @@
                     </ul>
 
                     <p> Locations </p>
-                    <li> Karachi</li>
-                    <li> Islamabad</li>
-                    <li>Lahore</li>
+                    <li><a href="https://goo.gl/maps/Dk6NH3fqx7FRm2ow5">Karachi</a></li>
+                    <li><a href="https://goo.gl/maps/4AEZ66psZ2hyQG3V6">Islamabad</a></li>
+                    <li><a href="https://goo.gl/maps/Dk6NH3fqx7FRm2ow5">Lahore</a></li>
 
 
                     <ul class="header-nav__social">
@@ -62,10 +62,10 @@
                         <li>
                             <a href="https://www.youtube.com/@Fishbowl_Group"><i class="fa fa-youtube"></i></a>
                         </li>
-                        <!--<li>
+                        <li>
                             <a href="#"><i class="fa fa-behance"></i></a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="#"><i class="fa fa-dribbble"></i></a>
                         </li>-->
                     </ul>
@@ -135,10 +135,10 @@
                     <a href="https://www.youtube.com/@Fishbowl_Group"><i class="fa fa-youtube"
                             aria-hidden="true"></i><span>YouTube</span></a>
                 </li>
-                <!--<li>
+                <li>
                     <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
                 </li>-->
             </ul>
@@ -224,7 +224,7 @@
                         }
                         </script>-->
 
-                        <h3 class="h2">PSL</h3>
+
                         <img src="images/clients/mozilla.png" class="h-[100px] inline" alt="">
                         <div class="transition-all duration-1000">
                             <p>Fishbowl's Inaugural Triumph:Pakistan Super League PSL!<br>
@@ -260,7 +260,7 @@
                 <div>
 
                     <div class="service-text">
-                        <h3 class="h2">Nurpur</h3>
+
                         <img src="images/clients/blackberry.png" class="h-[100px] inline" alt="">
                         <div>
 
@@ -291,7 +291,7 @@
 
                 <div>
                     <div class="service-text">
-                        <h3 class="h2">M&P</h3>
+
                         <img src="images/clients/M&P.png" class="h-[100px] inline" alt="">
                         <div>
                             <p>2400 hours of work – 24 hours of execution, delivered!<br>
@@ -320,7 +320,7 @@
                 <div>
 
                     <div class="service-text">
-                        <h3 class="h2">Shoop</h3>
+
                         <img src="images/clients/envato.png" alt="" class="h-[100px] inline">
                         <div>
                             <p>Savouring success, the noodle way!<br>
@@ -359,7 +359,7 @@
 
                 <div>
                     <div class="service-text">
-                        <h3 class="h2">Jazz</h3>
+
                         <img src="images/clients/apple.png" class="h-[100px] inline" alt="">
                         <div>
                             <p>#SuperNahiTou4GNahi – (It’s not 4G if it’s not super)!<br>
@@ -397,7 +397,7 @@
 
                 <div>
                     <div class="service-text">
-                        <h3 class="h2">Jazz</h3>
+
                         <img src="images/clients/apple.png" class="h-[100px] inline" alt="">
                         <div>
                             <p>Super for Change!<br>
@@ -444,14 +444,14 @@
             <div class="row section-header" data-aos="fade-up">
                 <div class="col-full">
                     <h2>AWARDS</h2>
-                    <h1 class="display-2">Getting noticed over time</h1>
+                    <h1 class="md:text-[3rem] text-[2rem]">Getting noticed over time</h1>
                 </div>
             </div> <!-- end section-header -->
 
             <!-- infinite scroll -->
-            <div class="pb-44 overflow-x-hidden" data-aos="fade-up">
-                <div
-                    class="flex flex-row md:justify-around justify-evenly items-center h-[15rem] w-[200vw] animate-h-scroll" id="hor-animation">
+            <div class="pb-44 md:overflow-x-hidden" data-aos="fade-up">
+                <div class="flex flex-row md:justify-around justify-evenly items-center h-[15rem] w-[200vw] max-md:hidden animate-h-scroll"
+                    id="hor-animation">
                     <div class=""><a href="#0" title="" class=""><img src="awards/02.png" style="max-width: 200%;"
                                 class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] anime-element transition-all duration-150" /></a>
                     </div>
@@ -489,8 +489,33 @@
                                 class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] anime-element transition-all duration-150" /></a>
                     </div>
                 </div>
-                <div class="flex flex-col items-center justify-center pt-36 hidden" id="some">
-                    <div class="font-bold text-5xl">Insert Details Here...</div>
+                <div class="md:hidden overflow-x-auto">
+
+                    <div class="flex flex-row md:justify-around justify-evenly items-center h-[15rem] w-[200vw] md:hidden"
+                        id="hor-animation">
+                        <div class=""><a href="#0" title="" class=""><img src="awards/02.png" style="max-width: 200%;"
+                                    class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] mob-anime-element transition-all duration-150" /></a>
+                        </div>
+                        <div class=""><a href="#0" title="" class=""><img src="awards/01.png" style="max-width: 200%;"
+                                    class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] mob-anime-element transition-all duration-150" /></a>
+                        </div>
+                        <div class=""><a href="#0" title="" class=""><img src="awards/03.png" style="max-width: 200%;"
+                                    class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] mob-anime-element transition-all duration-150" /></a>
+                        </div>
+                        <div class=""><a href="#0" title="" class=""><img src="awards/04.png" style="max-width: 200%;"
+                                    class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] mob-anime-element transition-all duration-150" /></a>
+                        </div>
+                        <div class=""><a href="#0" title="" class=""><img src="awards/05.png" style="max-width: 200%;"
+                                    class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] mob-anime-element transition-all duration-150" /></a>
+                        </div>
+                        <div class=""><a href="#0" title="" class=""><img src="awards/06.png" style="max-width: 200%;"
+                                    class="md:w-[150px] w-[100px] hover:w-[130px]  hover:md:w-[200px] mob-anime-element transition-all duration-150" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center pt-36 opacity-0" id="some">
+                    <div class="text-2xl text-center" id="tropphie-details"></div>
                 </div>
 
             </div> <!-- end clients-outer -->
@@ -498,7 +523,7 @@
             <!-- ====================================================== -->
             <!-- Portfolio starts here -->
 
-            <div class="flex flex-col items-center overflow-hidden">
+            <div class="flex flex-col items-center overflow-hidden" id="works">
                 <div class="flex flex-col justify-center items-center h-screen bg-[#111111] w-screen">
                     <div class="text-center basis-1/2 px-8">
                         <h2 class="subhead">RECENT WORKS</h2>
@@ -507,64 +532,87 @@
                     </div>
                 </div>
 
-                <div class="relative mt-[-30rem] md:w-[70vw] max-md:px-16">
+                <div class="relative mt-[-30rem] md:w-[70vw] max-md:px-16 h-screen" id="works-div">
                     <div class="md:flex md:flex-row">
                         <div class="md:basis-1/2">
                             <div class="overflow-hidden text-white group/jazz relative max-md:py-8">
-                                <img src="images/portfolio/grow-green.jpg" alt="Photo 1" class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
+                                <img src="images/portfolio/grow-green.jpg" alt="Photo 1"
+                                    class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
                                 <div class="absolute top-4 left-4 hidden group-hover/jazz:block">
                                     <div class="font-bold">JAZZ SUPER 4G</div>
                                     <div class="">Jazz - Super Nhi Tou 4G Nhi</div>
                                 </div>
                             </div>
                             <div class="overflow-hidden text-white group/serv relative max-md:py-8">
-                                <img src="images/portfolio/guitarist.jpg" alt="Photo 2" class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
+                                <img src="images/portfolio/guitarist.jpg" alt="Photo 2"
+                                    class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
                                 <div class="absolute top-4 left-4 hidden group-hover/serv:block">
                                     <div class="font-bold">SERVICE</div>
                                     <div class="">Servis - Sab Kay Liye</div>
                                 </div>
                             </div>
                             <div class="overflow-hidden text-white group/jc relative max-md:py-8">
-                                <img src="images/portfolio/the-beetle.jpg" alt="Photo 3" class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
+                                <img src="images/portfolio/the-beetle.jpg" alt="Photo 3"
+                                    class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
                                 <div class="absolute top-4 left-4 hidden group-hover/jc:block">
                                     <div class="font-bold">JAZZ CASH APP LAUCH</div>
                                     <div class="">JazzCash App Launch</div>
                                 </div>
                             </div>
+                            <div class="overflow-hidden text-white group/nur relative max-md:py-8">
+                                <img src="images/portfolio/SoyaSupreme.jpg" alt="Photo 6"
+                                    class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
+                                <div class="absolute top-4 left-4 hidden group-hover/nur:block">
+                                    <div class="font-bold">SOYA SUPREME</div>
+                                    <div class="">Thora Aur Khao</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="md:basis-1/2">
                             <div class="overflow-hidden text-white group/sh relative max-md:py-8">
-                                <img src="images/portfolio/palmeira.jpg" alt="Photo 4" class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
+                                <img src="images/portfolio/palmeira.jpg" alt="Photo 4"
+                                    class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
                                 <div class="absolute top-4 left-4 hidden group-hover/sh:block">
                                     <div class="font-bold">SHOOP</div>
                                     <div class="">Shoop Noodles</div>
                                 </div>
                             </div>
                             <div class="overflow-hidden text-white group/khel relative max-md:py-8">
-                                <img src="images/portfolio/woodcraft.jpg" alt="Photo 5" class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
+                                <img src="images/portfolio/woodcraft.jpg" alt="Photo 5"
+                                    class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
                                 <div class="absolute top-4 left-4 hidden group-hover/khel:block">
                                     <div class="font-bold">JAZZ - KHEIL DIL MEIN HA</div>
                                     <div class="">Jazz - Khel Dil Mein Ha</div>
                                 </div>
                             </div>
                             <div class="overflow-hidden text-white group/nur relative max-md:py-8">
-                                <img src="images/portfolio/lady-shutterbug.jpg" alt="Photo 6" class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
+                                <img src="images/portfolio/lady-shutterbug.jpg" alt="Photo 6"
+                                    class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
                                 <div class="absolute top-4 left-4 hidden group-hover/nur:block">
                                     <div class="font-bold">NURPUR</div>
                                     <div class="">Some Traditions Are Forever</div>
                                 </div>
                             </div>
+                            
                         </div>
 
                     </div>
-                </div>
 
+                    <!-- Overlay -->
+                    <!-- <div class="h-full w-full absolute top-0 left-0" id="works-overlay"
+                        style="background-image: linear-gradient(rgba(255, 255, 255, 0) 50%,rgba(255,255,255,0.4));">
+                    </div> -->
+                </div>
+            </div>
+            <div class="text-4xl p-16 text-center">
+                <p class="hover:text-black transition-all duration-500 md:text-gray-400 text-black hover:cursor-pointer" id="expand-works">View More</p>
             </div>
 
-
-            <div class="w-screen h-screen z-50 fixed top-0 left-0 flex flex-col justify-center items-center px-44 bg-slate-800 hidden gap-8 text-center" id="modal">
-                <button class="text-white text-9xl border-0 hover:bg-transparent basis-1/5 self-start" id="modal-btn">&times;</button>
-                <div class="pic basis-3/5">
+            <div class="w-screen h-screen z-50 fixed top-0 left-0 flex flex-col justify-center items-center md:px-44 px-16 bg-slate-800 hidden gap-8 text-center"
+                id="modal">
+                <button class="text-white text-9xl border-0 hover:bg-transparent basis-1/5 self-start"
+                    id="modal-btn">&times;</button>
+                <div class="pic basis-3/5 flex flex-col items-center">
 
                 </div>
                 <div class="pic-text basis-1/5"></div>
@@ -581,7 +629,7 @@
                 <div class="row section-header" data-aos="fade-up">
                     <div class="col-full">
                         <h2>BRANDS</h2>
-                        <h1 class="display-2">Underdogs and Superstars</h1>
+                        <h1 class="md:text-[3rem] text-[2rem]">Growth through Insights</h1>
                     </div>
                 </div> <!-- end section-header -->
 
@@ -600,7 +648,8 @@
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Beige.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/CCL.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Doatea.png" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/Fauji-foods.png" /></a>
+                            <a href="#0" title="" class="clients__slide"><img
+                                    src="images/clients/Fauji-foods.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/GO.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/M&P.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Mayfair.png" /></a>
@@ -609,47 +658,66 @@
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Reckitt.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/PSDF.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Must.png" /></a>
-                            <a href="#0" title="" class="clients__slide"><img src="images/clients/wordpress.png"/></a>
+                            <a href="#0" title="" class="clients__slide"><img src="images/clients/wordpress.png" /></a>
 
                         </div> <!-- end clients -->
                     </div> <!-- end col-full -->
                 </div> <!-- end clients-outer -->
 
-                
-                <!-- Team -->
-                <div class="relative flex flex-col items-center bg-black py-64">
-                    <div class="w-screen h-16 absolute md:top-[3rem] top-[1rem] bg-[#ffde00]"></div>
-                    <div class="text-[#ffde00] font-black absolute top-8 md:text-9xl text-5xl bg-black p-4 px-8">TEAM FISHBOWL</div>
-                    <div class="px-44">
 
-                        <div class="grid md:grid-cols-9 grid-cols-3 md:pt-36 pt-12 md:pb-12 pb-6 gap-16">
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/GulrezMojez.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/RashidKhan.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/SairaMasood.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/HamzaIftikhar.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/TaimurAzeem.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/HashimBukhari.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/SyedHamza.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/ZawaharButt.png" alt=""></div>
-                            <div class="avatar transition-all duration-700"><img src="images/profiles/AishaHashir.png" alt=""></div>
+                <!-- Team -->
+                <div class="relative flex flex-col items-center bg-black md:py-44 py-24">
+                    <div class="w-screen md:h-16 h-4 absolute top-[4rem] bg-[#ffde00]"></div>
+                    <div class="text-[#ffde00] font-black absolute top-8 md:text-9xl text-5xl bg-black p-4 px-8">TEAM
+                        FISHBOWL</div>
+                    <div class="md:px-44 px-12">
+
+                        <div class="grid md:grid-cols-9 grid-cols-3 pt-12 md:pb-12 pb-6 gap-8 lg:gap-16">
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/GulrezMojez.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/RashidKhan.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/SairaMasood.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/HamzaIftikhar.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/TaimurAzeem.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/HashimBukhari.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/SyedHamza.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/ZawaharButt.png"
+                                    alt=""></div>
+                            <div class="avatar transition-all duration-700"><img src="images/profiles/AishaHashir.png"
+                                    alt=""></div>
                         </div>
 
                         <div class="bg-transparent">
-                            
-                            <div class="w-2/3 h-2/3 z-50 fixed top-0 text-white translate-x-[25%] translate-y-[25%] left-0 flex flex-col justify-center items-center bg-slate-800 hidden gap-8 text-center px-40 py-12" id="avatar-model">
-                                <button class="text-white border-0 hover:bg-transparent basis-1/5 self-end text-8xl" id="avatar-btn">&times;</button>
-                                <div id="avatar-img"></div>
-                                <div id="avatar-name" class="text-6xl font-light"></div>
-                                <div id="occupation"></div>
-                                <div id="details"></div>
+
+                            <div class="w-2/3 h-2/3 z-50 fixed top-0 text-white translate-x-[25%] translate-y-[25%] left-0 bg-slate-800 hidden gap-8 text-center md:px-40 px-4 py-12 text-xl md:text-3xl font-light overflow-auto"
+                                id="avatar-model">
+                                <div class="flex flex-col justify-center items-center">
+                                    <button class="text-white border-0 hover:bg-transparent self-end md:text-8xl text-6xl"
+                                        id="avatar-btn">&times;</button>
+                                    <div id="avatar-img"></div>
+                                    <div id="avatar-name" class="md:text-6xl text-5xl font-light"></div>
+                                    <div id="occupation"></div>
+                                    <div id="details"></div>
+                                </div>
                             </div>
 
                         </div>
+
+                        <div class="text-center py-8">
+                            <div class="md:text-7xl text-4xl text-[#ffde00]">MORE OF OUR TEAM</div>
+                        </div>
+
                         <div>
                             <div><img src="images/profiles/FishBowlTeam.png" alt=""></div>
                         </div>
 
-                    </div>   
+                    </div>
 
                 </div>
 
@@ -766,12 +834,15 @@
                                     <a href="https://www.youtube.com/@Fishbowl_Group"><i class="fa fa-youtube"
                                             aria-hidden="true"></i></a>
                                 </li>
-                                <!--<li>
-                            <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                        </li>-->
+                                <li>
+                                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
+                                </li>
+
+
+                                <!--
+                                <li>
+                                    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                                </li>-->
                             </ul> <!-- end contact-social -->
 
                         </div> <!-- end contact-info -->
@@ -896,8 +967,10 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
+
+
+
+
 </body>
 
 </html>
-
-
