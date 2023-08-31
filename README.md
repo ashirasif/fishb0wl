@@ -1,6 +1,5 @@
 # fishb0wl
-Upon reviewing, I found it most efficient to write my own new file ("ashir.html"). I've used code from the previous file as well but to make it a bit more responsive, I had to take some steps on my own.
-
+Marketing firm site that I updated
 ## I updated:
 
 main.css: I've appended my styles at the end so It doesn't mix up with ones pre-defined in the file.<br/>
