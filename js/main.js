@@ -194,7 +194,7 @@
     $(".clients").slick({
       arrows: false,
       dots: true,
-      infinite: true,
+      infinite: false,
       slidesToShow: 6,
       slidesToScroll: 2,
       //autoplay: true,
@@ -420,9 +420,9 @@
 
 
   var trophiesMapper = {
-    "01" : "Effies 2021 – Shoop: Silver Trophy – Snacks & Desserts<br>Effies 2022 – Jazz: Silver Trophy – Corporate Reputation<br>Effies 2022 – Jazz: Silver Trophy – Positive Change: Social Good – Services<br>Effies 2022 – Jazz: Silver Trophy – Seasonal Marketing – Services<br>Effies 2022 – Shoop: Silver Trophy – Youth Marketing<br>Effies 2022 – 3rd most awarded agency",
+    "01" : "Effies 2021 – Shoop: Silver Trophy – Snacks & Desserts<br>Effies 2022 – Jazz: Silver Trophy – Corporate Reputation<br>Effies 2022 – Jazz: Silver Trophy – Positive Change: Social Good – Services<br>Effies 2022 – Jazz: Silver Trophy – Seasonal Marketing – Services<br>Effies 2022 – Shoop: Silver Trophy – Youth Marketing<br>Effies 2022 – 3rd most awarded agency<br>Effies 2023 - Jazz: Silver Trophy - David & Goliath",
     "02": "Effies 2022 – Shoop: Gold Trophy – Snacks & Desserts<br>Effies 2022 – 3rd most awarded agency",
-    "03": "Effies 2020 – Shoop: Bronze Trophy – Snacks & Desserts<br>Effies 2021 – Jazz: Bronze Trophy – Influencer (Danish Ali)<br>Effies 2021 – Shoop: Bronze Trophy – David & Goliath<br>Effies 2022 – Jazz: Bronze Trophy – Marketing Disruptor<br>Effies 2022 – Jazz: Bronze Trophy – Topical Marketing<br>Effies 2022 – 3rd most awarded agency",
+    "03": "Effies 2020 – Shoop: Bronze Trophy – Snacks & Desserts<br>Effies 2021 – Jazz: Bronze Trophy – Influencer (Danish Ali)<br>Effies 2021 – Shoop: Bronze Trophy – David & Goliath<br>Effies 2022 – Jazz: Bronze Trophy – Marketing Disruptor<br>Effies 2022 – Jazz: Bronze Trophy – Topical Marketing<br>Effies 2022 – 3rd most awarded agency<br>Effies 2023 - Jazz: Bronze Trophy - Internet & Telecom<br>Effies 2023 - Jazz: Bronze Trophy - Social Media",
     "04": "Digital Nation Video Creativity Award for Super for Change campaign by the GSMA Mobile 360 Asia Pacific",
     "05": "Jazz Women's Day 2021 - Shortlisted for Lisbon International Advertising Festival",
     "06": "PAS 2017 – Nurpur: Best in Food & Dairy Category"
@@ -477,13 +477,34 @@
   };
 
   var vids = {
-    "grow-green": "https://www.youtube.com/embed/n4t-Boy7hmQ", 
-    "guitarist": "https://www.youtube.com/embed/XM0-qDiodN4",
-    "the-beetle": "https://www.youtube.com/embed/pYcBioECDOU",
-    "palmeira" : "https://www.youtube.com/embed/wuDEL2TQH5M",
-    "woodcraft": "https://www.youtube.com/embed/hf2T8fGH5KU",
-    "lady-shutterbug": "https://www.youtube.com/embed/OI1izeM2GYQ",
-    "SoyaSupreme" : "https://www.youtube.com/embed/nrKR64NRDy4" 
+    "grow-green": {
+      type: "video",
+      url: "https://www.youtube.com/embed/n4t-Boy7hmQ", 
+    },
+    "guitarist": {
+      type: "video",
+      url: "https://www.youtube.com/embed/XM0-qDiodN4",
+    },
+    "the-beetle": {
+      type: "video",
+      url: "https://www.youtube.com/embed/pYcBioECDOU",
+    },
+    "palmeira" : {
+      type : "video",
+      url: "https://www.youtube.com/embed/wuDEL2TQH5M",
+    },
+    "woodcraft": {
+      type : "video",
+      url: "https://www.youtube.com/embed/hf2T8fGH5KU",
+    },
+    "lady-shutterbug": {
+      type : "image",
+      url: "images/portfolio/lady-shutterbug.jpg",
+    },
+    "SoyaSupreme" : {
+      type: "video",
+      url: "https://www.youtube.com/embed/nrKR64NRDy4"
+    }
   }
 
   var hideServiceText = function () {
@@ -542,22 +563,23 @@
   var clCard = function () {
     $(".card").on("click", function () {
       $("#modal").toggleClass("hidden");
+      document.body.classList.add("overflow-hidden");
       var l = $(this).attr("src").split("/").length
       var src = $(this).attr("src").split("/")[l - 1].split(".")[0];
       var w = $(window).width() * 0.6;
       console.log(w)
-      if (src == "lady-shutterbug") {
-        if ($(window).width() >= 1024) {
-          $(".pic").append(`<img src="images/portfolio/lady-shutterbug@2x.jpg" style="width:50%" class="object-center">`);
+      if (vids[src] == "image") {
+        if ($(window).width() >= 650) {
+          $(".pic").append(`<img src="${vids[src].url}" style="height:70vh">`);
         }
         else {
-          $(".pic").append(`<img src="images/portfolio/lady-shutterbug@2x.jpg"`);
+          $(".pic").append(`<img src="${vids[src].url}" style="width:70vw">`);
         }
       } else {
         if ($(window).width() >= 1024) {
-          var ifr = `<iframe width="${w}" height="${w / 1.77}" src="${vids[src]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+          var ifr = `<iframe width="${w}" height="${w / 1.77}" src="${vids[src].url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
         } else {
-          var ifr = `<iframe width="${w}" height="${w * 1.77}" src="${vids[src]}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+          var ifr = `<iframe width="${w}" height="${w * 1.77}" src="${vids[src].url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
         }
         
         $(".pic").append(ifr);
@@ -576,6 +598,8 @@
       $(".pic").children().remove();
       $(".pic-text").children().remove();
       $("#modal").toggleClass("hidden");
+      
+      document.body.classList.remove("overflow-hidden");
     });
   };
 
@@ -601,6 +625,7 @@
       var data = mapper[name];
       var src = $(this).children().first().attr("src");
       $("#avatar-name").text(Name);
+      document.body.classList.add("overflow-hidden")
       $("#occupation").text(data.occupation);
       $("#details").text(data.details);
       $("#avatar-model").toggleClass("hidden")
@@ -615,6 +640,7 @@
         $("#occupation").children().remove();
         $("#details").children().remove();
         $("#avatar-model").toggleClass("hidden");
+        document.body.classList.remove("overflow-hidden")
       });
     };
 

@@ -56,12 +56,13 @@
                         <li>
                             <a href="https://www.facebook.com/fishbowlgroup/"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="https://pk.linkedin.com/company/fishbowlgroup"><i class="fa fa-linkedin"></i></a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="https://www.youtube.com/@Fishbowl_Group"><i class="fa fa-youtube"></i></a>
                         </li>
+                        <!-- Replace the # with BEHNACE profile url i.e href="https://behance.com/example" -->
                         <li>
                             <a href="#"><i class="fa fa-behance"></i></a>
                         </li>
@@ -127,16 +128,18 @@
                     <a href="https://www.facebook.com/fishbowlgroup/"><i class="fa fa-facebook"
                             aria-hidden="true"></i><span>Facebook</span></a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="https://pk.linkedin.com/company/fishbowlgroup"><i class="fa fa-linkedin"
                             aria-hidden="true"></i><span>Linkedin</span></a>
-                </li>
+                </li> -->
                 <li>
                     <a href="https://www.youtube.com/@Fishbowl_Group"><i class="fa fa-youtube"
                             aria-hidden="true"></i><span>YouTube</span></a>
                 </li>
+
+                <!-- Replace the # with BEHANCE profile url i.e href="https://behance.com/example" -->
                 <li>
-                    <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
                 </li>
                 <!--<li>
                     <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
@@ -197,7 +200,7 @@
         <section class="bg-white flex flex-col min-h-screen py-64 px-16">
 
             <div
-                class="text-center md:text-[3.6rem] p-16 text-[5.7rem] lg:w-2/3 border-b-[1px] border-black/20 self-center">
+                class="text-center md:text-[3rem] text-[2rem] p-16 lg:w-2/3 border-b-[1px] border-black/20 self-center">
                 <h1 class="">CASE IN POINT</h1>
             </div>
 
@@ -515,7 +518,7 @@
                 </div>
 
                 <div class="flex flex-col items-center justify-center pt-36 opacity-0" id="some">
-                    <div class="text-2xl text-center" id="tropphie-details"></div>
+                    <div class="text-2xl text-center px-4" id="tropphie-details"></div>
                 </div>
 
             </div> <!-- end clients-outer -->
@@ -527,14 +530,15 @@
                 <div class="flex flex-col justify-center items-center h-screen bg-[#111111] w-screen">
                     <div class="text-center basis-1/2 px-8">
                         <h2 class="subhead">RECENT WORKS</h2>
-                        <h1 class="display-2 display-2--light">We love what we do, check out some of our latest works
+                        <h1 class="md:text-[3rem] text-[2rem] text-white">We love what we do, check out some of our latest works
                         </h1>
                     </div>
                 </div>
 
-                <div class="relative mt-[-30rem] md:w-[70vw] max-md:px-16 h-screen" id="works-div">
+                <!-- PORTFOLIO-->
+                <div class="relative md:mt-[-20rem] mt-[-40rem] md:w-[70vw] max-md:px-16 h-screen" id="works-div">
                     <div class="md:flex md:flex-row">
-                        <div class="md:basis-1/2">
+                        <div class="md:basis-1/2"> <!-- Left -->
                             <div class="overflow-hidden text-white group/jazz relative max-md:py-8">
                                 <img src="images/portfolio/grow-green.jpg" alt="Photo 1"
                                     class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
@@ -559,16 +563,17 @@
                                     <div class="">JazzCash App Launch</div>
                                 </div>
                             </div>
-                            <div class="overflow-hidden text-white group/nur relative max-md:py-8">
-                                <img src="images/portfolio/SoyaSupreme.jpg" alt="Photo 6"
+                            <div class="overflow-hidden text-white group/jc relative max-md:py-8">
+                                <img src="images/portfolio/SoyaSupreme.jpg" alt="Photo 3"
                                     class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
-                                <div class="absolute top-4 left-4 hidden group-hover/nur:block">
+                                <div class="absolute top-4 left-4 hidden group-hover/jc:block">
                                     <div class="font-bold">SOYA SUPREME</div>
                                     <div class="">Thora Aur Khao</div>
                                 </div>
                             </div>
+                            
                         </div>
-                        <div class="md:basis-1/2">
+                        <div class="md:basis-1/2"> <!-- Right --> 
                             <div class="overflow-hidden text-white group/sh relative max-md:py-8">
                                 <img src="images/portfolio/palmeira.jpg" alt="Photo 4"
                                     class="w-full h-auto hover:scale-125 object-fit transition-all duration-400 hover:brightness-[0.3] card">
@@ -593,7 +598,7 @@
                                     <div class="">Some Traditions Are Forever</div>
                                 </div>
                             </div>
-                            
+
                         </div>
 
                     </div>
@@ -608,14 +613,14 @@
                 <p class="hover:text-black transition-all duration-500 md:text-gray-400 text-black hover:cursor-pointer" id="expand-works">View More</p>
             </div>
 
-            <div class="w-screen h-screen z-50 fixed top-0 left-0 flex flex-col justify-center items-center md:px-44 px-16 bg-slate-800 hidden gap-8 text-center"
+            <div class="w-screen h-screen z-50 fixed top-0 left-0 md:px-44 px-16 bg-slate-800 hidden gap-8 text-center"
                 id="modal">
-                <button class="text-white text-9xl border-0 hover:bg-transparent basis-1/5 self-start"
-                    id="modal-btn">&times;</button>
-                <div class="pic basis-3/5 flex flex-col items-center">
-
+                <div class="flex flex-col h-full justify-evenly items-center">
+                    <button class="text-white text-9xl border-0 hover:bg-transparent  self-start"
+                        id="modal-btn">&times;</button>
+                    <div class="pic flex flex-col items-center justify-center"></div>
+                    <div class="pic-text"></div>
                 </div>
-                <div class="pic-text basis-1/5"></div>
             </div>
 
 
@@ -636,7 +641,6 @@
                 <div class="row clients-outer" data-aos="fade-up">
                     <div class="col-full">
                         <div class="clients">
-
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/apple.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/atom.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/blackberry.png" /></a>
@@ -648,8 +652,7 @@
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Beige.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/CCL.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Doatea.png" /></a>
-                            <a href="#0" title="" class="clients__slide"><img
-                                    src="images/clients/Fauji-foods.png" /></a>
+                            <a href="#0" title="" class="clients__slide"><img src="images/clients/Fauji-foods.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/GO.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/M&P.png" /></a>
                             <a href="#0" title="" class="clients__slide"><img src="images/clients/Mayfair.png" /></a>
@@ -693,16 +696,15 @@
                                     alt=""></div>
                         </div>
 
-                        <div class="bg-transparent">
+                        <div class="bg-black/70 fixed z-30 w-screen h-screen fixed top-0 hidden left-0" id="avatar-model">
 
-                            <div class="w-2/3 h-2/3 z-50 fixed top-0 text-white translate-x-[25%] translate-y-[25%] left-0 bg-slate-800 hidden gap-8 text-center md:px-40 px-4 py-12 text-xl md:text-3xl font-light overflow-auto"
-                                id="avatar-model">
+                            <div class="w-2/3 h-2/3 z-50 text-white translate-x-[25%] translate-y-[25%] bg-slate-800 gap-8 text-center md:px-40 px-4 py-12 text-xl md:text-3xl font-light overflow-auto">
                                 <div class="flex flex-col justify-center items-center">
-                                    <button class="text-white border-0 hover:bg-transparent self-end md:text-8xl text-6xl"
+                                    <button class="text-white border-0 hover:bg-transparent self-start md:text-8xl text-6xl"
                                         id="avatar-btn">&times;</button>
-                                    <div id="avatar-img"></div>
+                                        
                                     <div id="avatar-name" class="md:text-6xl text-5xl font-light"></div>
-                                    <div id="occupation"></div>
+                                    <div id="occupation" class="py-8"></div>
                                     <div id="details"></div>
                                 </div>
                             </div>
@@ -826,14 +828,16 @@
                                     <a href="https://www.facebook.com/fishbowlgroup/"><i class="fa fa-facebook"
                                             aria-hidden="true"></i></a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="https://pk.linkedin.com/company/fishbowlgroup"><i class="fa fa-linkedin"
                                             aria-hidden="true"></i></a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="https://www.youtube.com/@Fishbowl_Group"><i class="fa fa-youtube"
                                             aria-hidden="true"></i></a>
                                 </li>
+
+                                <!-- Replace the # with BEHANCE profile url i.e href="https://behance.com/example" -->
                                 <li>
                                     <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
                                 </li>
